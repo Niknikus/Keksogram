@@ -35,7 +35,7 @@
             <!-- Изначальное состояние поля для загрузки изображения -->
             <fieldset class="img-upload__start">
               <input type="file" id="upload-file" class="img-upload__input  visually-hidden" name="filename" required>
-              <label for="upload-file" class="img-upload__label  img-upload__control">Загрузить</label>
+              <label for="upload-file" class="img-upload__label  img-upload__control" tabindex="0">Загрузить</label>
             </fieldset>
 
             <!-- Форма редактирования изображения -->
@@ -59,7 +59,7 @@
                   <fieldset class="img-upload__effect-level  effect-level">
                     <input class="effect-level__value" type="number" name="effect-level" value="20">
                     <div class="effect-level__line">
-                      <div class="effect-level__pin" tabindex="0">Кнопка изменения глубины эффекта фотографии</div>
+                      <div class="effect-level__pin" tabindex="0" style="left: 90px">Кнопка изменения глубины эффекта фотографии</div>
                       <div class="effect-level__depth">Глубина эффекта фотографии</div>
                     </div>
                   </fieldset>
@@ -107,7 +107,7 @@
                       </label>
                     </li>
                     <li class="effects__item">
-                      <input type="radio" class="effects__radio  visually-hidden" name="effect" id="effect-heat" value="heat" checked>
+                      <input type="radio" class="effects__radio  visually-hidden" name="effect" id="effect-heat" value="heat">
                       <label for="effect-heat" class="effects__label">
                         <span class="effects__preview  effects__preview--heat">Превью эффекта Зной</span>
                         Зной
@@ -118,8 +118,8 @@
 
                 <!-- Добавление хэш-тегов и комментария к изображению -->
                 <fieldset class="img-upload__text text">
-                  <input class="text__hashtags" name="hashtags" placeholder="#хэш-тег">
-                  <textarea class="text__description" name="description" placeholder="Ваш комментарий..."></textarea>
+                  <input class="text__hashtags" name="hashtags" placeholder="#хэш-тег" required>
+                  <textarea class="text__description" name="description" placeholder="Ваш комментарий..." maxlength="250"></textarea>
                 </fieldset>
 
                 <!-- Кнопка для отправки данных на сервер -->
@@ -236,7 +236,13 @@
     <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
   </template>
 
-  <script src="js/pictures.js"></script>
 
+  <script src="js/handlers.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/pictures.js"></script>
+  <script src="js/preview.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/filter-form.js"></script>
 </body>
 </html>
