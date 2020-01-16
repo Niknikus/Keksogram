@@ -30,12 +30,22 @@
       <section class="img-upload">
         <div class="img-upload__wrapper">
           <h2 class="img-upload__title  visually-hidden">Загрузка фотографии</h2>
-          <form class="img-upload__form" id="upload-select-image" method="post" enctype="multipart/form-data" autocomplete="off">
+          <form class="img-upload__form"
+                id="upload-select-image"
+                method="post"
+                action="#"
+                enctype="multipart/form-data"
+                autocomplete="off">
 
             <!-- Изначальное состояние поля для загрузки изображения -->
             <fieldset class="img-upload__start">
-              <input type="file" id="upload-file" class="img-upload__input  visually-hidden" name="filename" required>
-              <label for="upload-file" class="img-upload__label  img-upload__control" tabindex="0">Загрузить</label>
+              <input type="file"
+                     id="upload-file"
+                     class="img-upload__input visually-hidden"
+                     name="filename">
+              <label for="upload-file"
+                     class="img-upload__label  img-upload__control"
+                     tabindex="0">Загрузить</label>
             </fieldset>
 
             <!-- Форма редактирования изображения -->
@@ -236,13 +246,17 @@
     <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
   </template>
 
+  <script src="js/backend.js"></script>
+  <script src="js/pictures.js"></script>
+  <script src="js/preview.js"></script>
+  <script src="js/data.js"></script>
+
 
   <script src="js/handlers.js"></script>
   <script src="js/utils.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/pictures.js"></script>
-  <script src="js/preview.js"></script>
+
   <script src="js/gallery.js"></script>
   <script src="js/filter-form.js"></script>
+
 </body>
 </html>
